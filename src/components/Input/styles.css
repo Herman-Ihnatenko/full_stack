@@ -1,0 +1,18 @@
+.input_container {
+  width: 470px;
+  height: 176px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  left: 15px;
+  position: relative;
+}
+
+input {
+  width: 470px;
+  height: 50px;
+  border-radius: 4px;
+  gap: 3px;
+  border: 1px solid black;
+  outline: none;
+}

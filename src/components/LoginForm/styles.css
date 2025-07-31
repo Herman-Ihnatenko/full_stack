@@ -1,0 +1,27 @@
+.login_form_component {
+  width: 590px;
+  min-height: 450px;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid #000000;
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.login_form_title {
+  font-size: 24px;
+  width: 471px;
+  height: 24px;
+  font-family: "Lato", sans-serif;
+  left: 15px;
+  position: relative;
+}
+
+label {
+  font-family: "Lato", sans-serif;
+  width: 400px;
+  font-size: 16px;
+  height: 24px;
+}
