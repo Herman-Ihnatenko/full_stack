@@ -1,14 +1,15 @@
-import Card from "../../components/Card/card.jsx";
-import "./card.css";
+import SimpsonsCard from "../../components/SimpsonsCard/SimpsonsCard";
 
-const Homework02 = () => {
+import "./styles.css";
+
+function Homework_02() {
   return (
-    <div>
-      <Card />
-      <Card />
-      <Card />
+    <div className="homework02_page_wrapper">
+      <SimpsonsCard />
+      <SimpsonsCard />
+      <SimpsonsCard />
     </div>
   );
-};
+}
 
-export default Homework02;
+export default Homework_02;
