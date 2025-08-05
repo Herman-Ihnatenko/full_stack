@@ -12,4 +12,10 @@
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 4px;
+}
+
+.button_component:hover {
+  background-color: #2710a8;
+  transform: scale(1.05);
 }
