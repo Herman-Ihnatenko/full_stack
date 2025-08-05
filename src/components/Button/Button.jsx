@@ -1,11 +1,11 @@
 import "./styles.css";
 
-function Button({ type = "button", buttonName = "Send", onClick = () => {}, children }) {
+function Button({ type = "button", name = "Send", onClick = () => {}, children }) {
   return (
-    <button type={type} className="button_component" onClick={onClick}>
+    <button className="button_component" onClick={onClick} type={type}>
       {/* {children ? "" : buttonName} */}
       {/* Улосвный рендеринг */}
-      {!children && buttonName}
+      {!children && name}
       {children}
     </button>
   );

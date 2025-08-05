@@ -1,18 +1,24 @@
-.input_container {
-  width: 470px;
-  height: 176px;
+.input-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  left: 15px;
-  position: relative;
+  gap: 4px;
 }
 
-input {
-  width: 470px;
+.input-label {
+  font-size: 16px;
+  color: hsl(0, 0%, 44%);
+}
+
+.input-component {
+  width: 100%;
   height: 50px;
+  border: 1px solid #3f3f3f;
   border-radius: 4px;
-  gap: 3px;
-  border: 1px solid black;
+  padding: 12px;
   outline: none;
+}
+
+.input-component::placeholder {
+  color: #6f6f6f;
+  font-size: 16px;
 }

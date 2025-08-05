@@ -1,12 +1,23 @@
 import "./styles.css";
 
-function Input ({ name, type, placeholder, label }) {
+// function Input(props) {
+//   console.log(props);
+//   const { id, name, type, placeholder, label } = props;
+function Input({ id, name, type, placeholder, label }) {
   return (
-    <div>
-      <label>{label}</label>
-      <input type={type} name={name} placeholder={placeholder} />
+    <div className="input-wrapper">
+      <label className="input-label" htmlFor={id}>
+        {label}
+      </label>
+      <input
+        className="input-component"
+        id={id}
+        name={name}
+        type={type}
+        placeholder={placeholder}
+      />
     </div>
   );
-};
+}
 
 export default Input;
