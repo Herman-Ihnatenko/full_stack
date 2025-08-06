@@ -1,7 +1,7 @@
 import Feedback from "../../components/Feedback/Feedback";
 import "./styles.css";
 
-const HomeWork_04 = () => {
+function HomeWork_04() {
   return (
     <div className="homework04_page_wrapper">
       <Feedback />
