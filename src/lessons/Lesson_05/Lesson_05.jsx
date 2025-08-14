@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {v4} from "uuid";
+import { v4 } from "uuid";
 import Button from "../../components/Button/Button";
 
 import "./styles.css";
@@ -7,7 +7,31 @@ import "./styles.css";
 function Lesson_05() {
   let [orders, setOrders] = useState([]);
   const order_list = orders.map((orderItem) => {
-    return <li key = {v4()} className="order_item">{orderItem}</li>;
+    return (
+      <li key={v4()} className="order_item">
+        {orderItem}
+      </li>
+    );
+  });
+
+  // Массив с названиями блюд (для создания кнопок и для map)
+  let menuItems = ["Burger", "Fries", "Cola", "Salad", "Ketchup", "Ice-cream"];
+
+  /* Возможный вариант с использованием map (вместо того, чтобы каждый раз переделывать один 
+   и тот же код на разные кнопки, можно просто использовать map) */
+  const menu_list = menuItems.map((menuItem) => {
+    return (
+      <div className="button_control" key={menuItem}>
+        <Button
+          name={menuItem}
+          onClick={() => {
+            setOrders((prevValue) => {
+              return [...prevValue, menuItem];
+            });
+          }}
+        />
+      </div>
+    );
   });
 
   return (
@@ -15,7 +39,12 @@ function Lesson_05() {
       <div className="menu_wrapper">
         <h1 className="menu">Menu:</h1>
         <div className="button_wrapper">
-          <div className="button_control">
+
+          {/* новая реализация списка меню (с использованием map) */}
+          {menu_list}
+
+          {/* старая реализация списка меню (на уроке) */}
+          {/* <div className="button_control">
             <Button
               name="Burger"
               onClick={() => {
@@ -74,7 +103,7 @@ function Lesson_05() {
                 });
               }}
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="order_wrapper">
